@@ -25,14 +25,15 @@ bot.on('message', message => {
 
             case 'salvar tema':
                 const homeworkData = parameters[1].split(';');
-                homeWorkService.saveHomework(homeworkData[0], homeworkData[1], homeworkData[2], function (err) {
-                    if (err) {
-                        console.log(err)
-                        message.channel.send('Erro ao salvar o tema...');
-                    } else {
-                        message.channel.send('Salvo com sucesso...');
-                    };
-                });
+                homeWorkService.saveHomework(homeworkData[0], homeworkData[1], homeworkData[2])
+                    .then(function (err) {
+                        if (err) {
+                            console.log(err)
+                            message.channel.send('Erro ao salvar o tema...');
+                        } else {
+                            message.channel.send('Salvo com sucesso...');
+                        };
+                    });
             break;
 
             case 'buscar temas':

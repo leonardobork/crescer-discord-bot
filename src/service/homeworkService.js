@@ -1,15 +1,13 @@
 const Homework = require('../model/homework.js');
 
-function saveHomework(name, description, gist, handleErr) {
+function saveHomework(name, description, gist) {
     const homework = new Homework({
         name: name,
         description: description,
         gist: gist
     });
 
-    homework.save(function (err) {
-       handleErr(err);     
-    });
+    return new Promise(rev => rev(homework.save(err => err)));
 }
 
 function findAllMessage() {
