@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const database = require('./config/database.js');
 const homeWorkService = require('./service/homeworkService.js');
-console.log(process.env.BOT_DB)
 database.connect(process.env.BOT_DB);
 
 const bot = new Discord.Client();
