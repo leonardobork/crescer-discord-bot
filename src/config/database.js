@@ -34,5 +34,6 @@ function connectToDatabase(db) {
 }
 
 module.exports =  {
-    connectToDatabase
+    connectToDatabase,
+    connect
 }
