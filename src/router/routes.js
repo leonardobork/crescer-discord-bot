@@ -18,7 +18,7 @@ function directMessageToFunctionality(message){
         break;
         
         case 'salvar tema':
-        homeWorkService.saveHomework(getSavingInformation(messageParameters)).then(function (err) {
+        homeWorkService.saveHomework(getSavingInformation(messageParameters)).then(err =>{
             if (err) {
                 message.channel.send('Erro ao salvar o tema...');
             } else {
