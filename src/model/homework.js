@@ -5,11 +5,19 @@ const homeworkSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  module : {
+    type: String,
+    required: true
+  },
   description: {
       type: String,
       required: true
   },
   gist : {
+    type: String,
+    required: true
+  },
+  deadline : {
     type: String,
     required: true
   }

@@ -3,8 +3,10 @@ const Homework = require('../model/homework.js');
 function saveHomework(homeworkData) {
     const homework = new Homework({
         name: homeworkData[0],
-        description: homeworkData[1],
-        gist: homeworkData[2]
+        module: homeworkData[1],
+        description: homeworkData[2],
+        gist: homeworkData[3],
+        deadline: homeworkData[4]
     });
 
     return new Promise(rev => rev(homework.save(err => err)));
@@ -17,7 +19,7 @@ function findAllMessage() {
         
         var message = 'Aqui estão os temas:';
         homework.forEach(work => {
-            message = message + `\n\n Nome: ${work.name} \n Descrição: ${work.description} \n Gist: ${work.gist}`
+            message = message + `\n\n Id: ${work.id} \n Nome: ${work.name} \n Módulo: ${work.module} \n Descrição: ${work.description} \n Gist: ${work.gist} \n Data de entrega: ${work.deadline}`
         });
 
         resolve(message);
@@ -26,7 +28,7 @@ function findAllMessage() {
 }
 
 function getAjuda() {
-    return 'Bem vindo ao bot do crescer! \n Funcionalidades: \n Salvar tema:  \"!salvar tema\" : <nome do tema>; <descrição do tema>; <gist do tema>' +
+    return 'Bem vindo ao bot do crescer! \n Funcionalidades: \n Salvar tema:  \"!salvar tema\" : <nome do tema>; <módulo do tema>; <descrição do tema>; <gist do tema>; <data-de-entrega>' +
     '\n Buscar temas: \"!buscar tema\"';
 }
 
