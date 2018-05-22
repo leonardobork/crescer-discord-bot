@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/leonardobork/crescer-discord-bot.svg?branch=master)](https://travis-ci.org/leonardobork/crescer-discord-bot)
+![Heroku](https://heroku-badge.herokuapp.com/?app=crescer-bot)
 
 # Crescer Bot :robot: :computer:
 
