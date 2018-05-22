@@ -4,7 +4,7 @@
   "description": "a bot for the cwi-crescer's discord",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha ./src/spec/test.js",
     "start": "node ./src/index.js"
   },
   "repository": {
@@ -24,5 +24,9 @@
   "dependencies": {
     "discord.js": "^11.3.2",
     "mongoose": "^5.0.17"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
   }
 }

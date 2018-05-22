@@ -1,10 +1,10 @@
 const Homework = require('../model/homework.js');
 
-function saveHomework(name, description, gist) {
+function saveHomework(homeworkData) {
     const homework = new Homework({
-        name: name,
-        description: description,
-        gist: gist
+        name: homeworkData[0],
+        description: homeworkData[1],
+        gist: homeworkData[2]
     });
 
     return new Promise(rev => rev(homework.save(err => err)));
@@ -25,7 +25,13 @@ function findAllMessage() {
     });
 }
 
+function getAjuda() {
+    return 'Bem vindo ao bot do crescer! \n Funcionalidades: \n Salvar tema:  \"!salvar tema\" : <nome do tema>; <descrição do tema>; <gist do tema>' +
+    '\n Buscar temas: \"!buscar tema\"';
+}
+
 module.exports = {
     saveHomework,
-    findAllMessage
+    findAllMessage,
+    getAjuda
 }
