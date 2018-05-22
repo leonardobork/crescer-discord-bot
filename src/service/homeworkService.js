@@ -27,13 +27,22 @@ function findAllMessage() {
     });
 }
 
+function deleteHomework(homeworkData) {
+    return new Promise(rev => rev(Homework.findByIdAndRemove({_id: extractHomeworkID(homeworkData)}, err => err)));
+}
+
+function extractHomeworkID(homeworkData) {
+    return homeworkData[0].trim();
+}
+
 function getAjuda() {
-    return 'Bem vindo ao bot do crescer! \n Funcionalidades: \n Salvar tema:  \"!salvar tema\" : <nome do tema>; <módulo do tema>; <descrição do tema>; <gist do tema>; <data-de-entrega>' +
-    '\n Buscar temas: \"!buscar tema\"';
+    return 'Bem vindo ao bot do crescer! \nFuncionalidades: \n Salvar tema:  \"!salvar tema\" : <nome do tema>; <módulo do tema>; <descrição do tema>; <gist do tema>; <data-de-entrega>' +
+    '\nBuscar temas: \"!buscar tema\ \nDeletar tema: \"!deletar tema\": <id do tema>';
 }
 
 module.exports = {
     saveHomework,
     findAllMessage,
-    getAjuda
+    getAjuda,
+    deleteHomework
 }
