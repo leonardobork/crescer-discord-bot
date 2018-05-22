@@ -5,38 +5,52 @@
 ## Instalação
 
 ### Pré-requisitos
-Para iniciar , you need the following dependencies installed:
+Para iniciar , você precisa das seguintes dependências:
 
 * [Git](https://git-scm.com)
 * [Node](https://nodejs.org)
 * [npm](https://www.npmjs.com/)
 
-### Steps
+### Passo a passo
 
-Clone the Git repository.
+Clone o repositório.
 
 ```bash
 git clone https://github.com/leonardobork/crescer-discord-bot.git
 ```
 
-After cloning the Git repository, you have to install the Node dependencies. Navigate to the root of your cloned repository and use npm to install all necessary dependencies.
+Depois de clonado, navegue até o diretorio root do projeto e instale as dependências node
 
 ```bash
 npm install
 ```
+## Variáveis de ambiente
 
+O projeto se conecta com uma base mongo e um bot através de variáveis de ambiente, configure-as seguindo o seguinte padrão:
+
+```bash
+export BOT_TOKEN=Seu token de bot aqui
+export BOT_DB=Sua connection string mongo aqui
+```
 ## Running
 
-You can use the previously installed Angular CLI to run the project locally.
+Para rodar o projeto:
 
 ```bash
 npm start
 ```
 ## Tests
 
+Para rodar o somente os testes:
+
 ```bash
 npm test
 ```
 
+## Contribuições
+Para contribuir com ideias crie uma issue;
+Para contribuir com código crie um PR;
+
+Happy coding :smile:
 
 
