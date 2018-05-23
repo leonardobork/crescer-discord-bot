@@ -26,7 +26,18 @@ function directMessageToFunctionality(message){
             }
         });
         break;
-        
+
+        case 'deletar tema':
+        homeWorkService.deleteHomework(getSavingInformation(messageParameters)).then(err =>{
+            if (err) {
+                console.log(err)
+                message.channel.send('Erro ao deletar o tema...');
+            } else {
+                message.channel.send('Deletado com sucesso...');
+            }
+        });
+        break;
+
         case 'buscar temas':
         homeWorkService.findAllMessage().then(res => message.channel.send(res));
         break;
