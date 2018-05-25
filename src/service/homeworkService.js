@@ -1,4 +1,4 @@
-const Homework = require('../model/homework.js');
+import Homework from '../model/homework.js';
 
 function saveHomework(homeworkData) {
     const homework = new Homework({
@@ -40,7 +40,7 @@ function getAjuda() {
     '\nBuscar temas: \"!buscar tema\ \nDeletar tema: \"!deletar tema\": <id do tema>';
 }
 
-module.exports = {
+export default {
     saveHomework,
     findAllMessage,
     getAjuda,

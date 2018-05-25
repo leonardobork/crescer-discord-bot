@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const homeworkSchema = new mongoose.Schema({
   name: {
@@ -23,4 +23,4 @@ const homeworkSchema = new mongoose.Schema({
   }
 }, { minimize: false });
 
-module.exports = mongoose.model('Homework', homeworkSchema);
+export default mongoose.model('Homework', homeworkSchema);

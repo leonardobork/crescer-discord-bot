@@ -1,4 +1,4 @@
-const chai = require('chai');
+import chai from 'chai';
 
 describe('addTwoNumbers()', function () {
     it('should add two numbers', function () {
