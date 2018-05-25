@@ -1,4 +1,4 @@
-import Homework from '../model/homework.js';
+import HomeworkService from '../services/homeworkService.js';
 
 function saveHomework(homeworkData) {
     const homework = new Homework({
@@ -9,26 +9,27 @@ function saveHomework(homeworkData) {
         deadline: homeworkData[4]
     });
 
-    return new Promise(rev => rev(homework.save(err => err)));
+    return HomeworkService.addHomework(homework);
 }
 
 function findAllMessage() {
     return new Promise((resolve, reject) => {
-      Homework.find({}, (err, homework) => {
-        if (err) reject(err);
-        
-        var message = 'Aqui estão os temas:';
-        homework.forEach(work => {
-            message = message + `\n\n Id: ${work.id} \n Nome: ${work.name} \n Módulo: ${work.module} \n Descrição: ${work.description} \n Gist: ${work.gist} \n Data de entrega: ${work.deadline}`
-        });
+        HomeworkService.getHomeworks().then(snapshot => {
+            let message = 'Aqui estão os temas:';            
+            snapshot.forEach(document => {
+                const work = document.data();
+                const id = document.id;
 
-        resolve(message);
-      });
+                message = message + `\n\n Id: ${id} \n Nome: ${work.name} \n Módulo: ${work.module} \n Descrição: ${work.description} \n Gist: ${work.gist} \n Data de entrega: ${work.deadline}`
+            });
+
+            resolve(message);
+        }).catch(err => reject(err));
     });
 }
 
 function deleteHomework(homeworkData) {
-    return new Promise(rev => rev(Homework.findByIdAndRemove({_id: extractHomeworkID(homeworkData)}, err => err)));
+    return HomeworkService.deleteHomework(extractHomeworkID(homeworkData));
 }
 
 function extractHomeworkID(homeworkData) {
