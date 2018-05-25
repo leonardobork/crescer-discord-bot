@@ -1,6 +1,9 @@
 const Discord = require('discord.js');
 const database = require('./config/database.js');
-const routes = require('./router/routes.js')
+const routes = require('./router/routes.js');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 database.connect(process.env.BOT_DB);
 
