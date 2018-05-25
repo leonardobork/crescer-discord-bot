@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha ./src/spec/test.js",
-    "start": "node ./src/index.js",
-    "dev":"node ./src/index.js"
+    "start": "node ./dist/index.js",
+    "dev": "babel-node ./src/index.js",
+    "compile": "babel ./src --out-dir ./dist",
+    "prepublish": "npm run compile"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,8 @@
     "mongoose": "^5.0.17"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "chai": "^4.1.2",
     "mocha": "^5.2.0"
   }

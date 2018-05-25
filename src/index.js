@@ -1,7 +1,7 @@
-const Discord = require('discord.js');
-const database = require('./config/database.js');
-const routes = require('./router/routes.js');
-const dotenv = require('dotenv');
+import Discord from 'discord.js';
+import database from './config/database.js';
+import routes from './router/routes.js';
+import dotenv from 'dotenv';
 
 dotenv.config();
 
