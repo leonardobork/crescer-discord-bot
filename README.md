@@ -26,12 +26,14 @@ npm install
 ```
 ## Variáveis de ambiente
 
-O projeto se conecta com uma base mongo e um bot através de variáveis de ambiente, configure-as criando um arquivo .env no diretório base do projeto, da seguinte maneira:
+O projeto se conecta com o bot através de uma variável de ambiente, configure-a criando um arquivo .env no diretório base do projeto, da seguinte maneira:
 
 ```
 BOT_TOKEN=Seu token de bot aqui
-BOT_DB=Sua connection string mongo aqui
 ```
+
+Credenciais para seu projeto no Firebase também são necessárias, adicione um arquivo chamado `firebase-key.json` na pasta `config` com estas credenciais (https://firebase.google.com/docs/firestore/quickstart#initialize).
+ 
 ## Running
 
 Para rodar o projeto em modo de desenvolvimento use:
