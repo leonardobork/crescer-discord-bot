@@ -44,7 +44,7 @@ npm run dev
 Para rodar o somente os testes:
 
 ```bash
-npm test
+npm run dev-test
 ```
 
 ## Contribuições
