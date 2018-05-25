@@ -4,8 +4,12 @@
   "description": "a bot for the cwi-crescer's discord",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./src/spec/test.js",
-    "start": "node ./src/index.js"
+    "test": "mocha ./dist/spec",
+    "start": "node ./dist/index.js",
+    "dev": "babel-node ./src/index.js",
+    "compile": "babel ./src --out-dir ./dist",
+    "prepublish": "npm run compile",
+    "dev-test": "mocha --require babel-register ./src/spec"
   },
   "repository": {
     "type": "git",
@@ -23,9 +27,12 @@
   "homepage": "https://github.com/leonardobork/crescer-discord-bot#readme",
   "dependencies": {
     "discord.js": "^11.3.2",
+    "dotenv": "^5.0.1",
     "mongoose": "^5.0.17"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "chai": "^4.1.2",
     "mocha": "^5.2.0"
   }

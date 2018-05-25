@@ -26,18 +26,18 @@ npm install
 ```
 ## Variáveis de ambiente
 
-O projeto se conecta com uma base mongo e um bot através de variáveis de ambiente, configure-as seguindo o seguinte padrão:
+O projeto se conecta com uma base mongo e um bot através de variáveis de ambiente, configure-as criando um arquivo .env no diretório base do projeto, da seguinte maneira:
 
-```bash
-export BOT_TOKEN=Seu token de bot aqui
-export BOT_DB=Sua connection string mongo aqui
+```
+BOT_TOKEN=Seu token de bot aqui
+BOT_DB=Sua connection string mongo aqui
 ```
 ## Running
 
-Para rodar o projeto:
+Para rodar o projeto em modo de desenvolvimento use:
 
 ```bash
-npm start
+npm run dev
 ```
 ## Tests
 

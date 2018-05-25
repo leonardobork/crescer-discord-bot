@@ -1,4 +1,4 @@
-const homeWorkService = require('../service/homeworkService.js');
+import homeWorkService from '../service/homeworkService.js';
 
 function startBot(bot) {
     bot.on('message', message => {
@@ -71,4 +71,4 @@ function getSavingInformation(messageParameters) {
     return messageParameters[1].split(';');
 }
 
-module.exports = {startBot};
+export default {startBot};
