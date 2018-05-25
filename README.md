@@ -30,10 +30,9 @@ O projeto se conecta com o bot através de uma variável de ambiente, configure-
 
 ```
 BOT_TOKEN=Seu token de bot aqui
-```
-
-Credenciais para seu projeto no Firebase também são necessárias, adicione um arquivo chamado `firebase-key.json` na pasta `config` com estas credenciais (https://firebase.google.com/docs/firestore/quickstart#initialize).
- 
+FIREBASE_EMAIL=Seu email do firebase aqui
+FIREBASE_TOKEN="Sua token de firebase aqui"
+``` 
 ## Running
 
 Para rodar o projeto em modo de desenvolvimento use:

@@ -1,9 +1,14 @@
-const admin = require('firebase-admin');
+import admin from 'firebase-admin';
+import dotenv from 'dotenv';
 
-const serviceAccount = require('./firebase-key.json');
+dotenv.config();
 
-const app = admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
+admin.initializeApp({
+  credential: admin.credential.cert({
+    clientEmail: process.env.FIREBASE_EMAIL,
+    privateKey: process.env.FIREBASE_KEY,
+    projectId: 'bot-crescer'
+  }),
   databaseURL: 'https://bot-crescer.firebaseio.com'
 });
 
