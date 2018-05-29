@@ -10,7 +10,7 @@
     "dev": "babel-node ./src/index.js",
     "compile": "babel ./src --out-dir ./dist",
     "prepublish": "npm run compile",
-    "dev-test": "mocha --require babel-register ./src/spec"
+    "dev-test": "mocha --require babel-register ./src/spec/**"
   },
   "repository": {
     "type": "git",

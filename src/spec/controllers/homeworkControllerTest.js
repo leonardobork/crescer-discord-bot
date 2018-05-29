@@ -1,5 +1,5 @@
 import chai from 'chai';
-import homeworkController from "../controllers/homeworkController";
+import homeworkController from "../../controllers/homeworkController";
 
 describe('getAjuda()', function () {
     it('should add two numbers', function () {
