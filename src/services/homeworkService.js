@@ -17,5 +17,5 @@ function deleteHomework(id) {
 export default {
     getHomeworks,
     addHomework,
-    deleteHomework
-}
+    deleteHomework,
+};

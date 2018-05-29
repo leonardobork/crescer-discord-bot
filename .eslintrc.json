@@ -1,4 +1,6 @@
 {
     "extends": "airbnb-base",
-    "indent": ["error", 4]
+    "rules": {
+      "indent": [2, 4]
+    }
 }

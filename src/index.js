@@ -1,5 +1,5 @@
 import Discord from 'discord.js';
-import routes from './router/routes.js';
+import routes from './router/routes';
 
 const bot = new Discord.Client();
 const token = process.env.BOT_TOKEN;
@@ -10,4 +10,4 @@ bot.on('ready', () => {
 
 routes.startBot(bot);
 
-bot.login(token)
+bot.login(token);
