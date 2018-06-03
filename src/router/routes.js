@@ -1,4 +1,4 @@
-import homeWorkController from '../controllers/homeworkController';
+import homeworkService from '../services/homeworkService';
 
 function botSendTheMessage(message) {
     return message.author.bot;
@@ -28,23 +28,23 @@ function directMessageToFunctionality(message) {
         break;
 
     case 'salvar tema':
-        homeWorkController.saveHomework(getSavingInformation(messageParameters))
+        homeworkService.saveHomework(getSavingInformation(messageParameters))
             .then(() => message.channel.send('Salvo com sucesso...'))
             .catch(() => message.channel.send('Erro ao salvar o tema...'));
         break;
 
     case 'deletar tema':
-        homeWorkController.deleteHomework(getSavingInformation(messageParameters))
+        homeworkService.deleteHomework(getSavingInformation(messageParameters))
             .then(() => message.channel.send('Deletado com sucesso...'))
             .catch(() => message.channel.send('Erro ao deletar o tema...'));
         break;
 
     case 'buscar temas':
-        homeWorkController.findAllMessage().then(res => message.channel.send(res));
+        homeworkService.findAllMessage().then(res => message.channel.send(res));
         break;
 
     case 'ajuda':
-        message.channel.send(homeWorkController.getAjuda());
+        message.channel.send(homeworkService.getAjuda());
         break;
 
     default:
