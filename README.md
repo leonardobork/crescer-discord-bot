@@ -26,12 +26,11 @@ npm install
 ```
 ## Variáveis de ambiente
 
-O projeto se conecta com o bot através de uma variável de ambiente, configure-a criando um arquivo .env no diretório base do projeto, da seguinte maneira:
+O projeto se conecta com o bot e um banco mongo através de variáveis de ambiente, configure-as criando um arquivo .env no diretório base do projeto, da seguinte maneira:
 
 ```
 BOT_TOKEN=Seu token de bot aqui
-FIREBASE_EMAIL=Seu email do firebase aqui
-FIREBASE_TOKEN="Sua token de firebase aqui"
+BOT_DB=Seu banco mongo aqui
 ``` 
 ## Running
 
