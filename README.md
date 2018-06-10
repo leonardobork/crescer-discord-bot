@@ -16,13 +16,13 @@ Para iniciar , você precisa das seguintes dependências:
 Clone o repositório.
 
 ```bash
-git clone https://github.com/leonardobork/crescer-discord-bot.git
+$ git clone https://github.com/leonardobork/crescer-discord-bot.git
 ```
 
 Depois de clonado, navegue até o diretorio root do projeto e instale as dependências node
 
 ```bash
-npm install
+$ npm install
 ```
 ## Variáveis de ambiente
 
@@ -37,14 +37,14 @@ BOT_DB=Seu banco mongo aqui
 Para rodar o projeto em modo de desenvolvimento use:
 
 ```bash
-npm run dev
+$ npm run dev
 ```
 ## Tests
 
 Para rodar o somente os testes:
 
 ```bash
-npm run dev-test
+$ npm run dev-test
 ```
 
 ## Contribuições
