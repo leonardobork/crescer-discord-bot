@@ -1,7 +1,6 @@
 {
     "extends": "airbnb-base",
     "rules": {
-      "indent": [2, 4],
-      "linebreak-style": ["error", "windows"]
+      "indent": [2, 4]
     }
 }
